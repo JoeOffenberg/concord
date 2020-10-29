@@ -1,6 +1,6 @@
 flows:
   default:
-  - log: "${http.asString('http://localhost:8001/api/v1/server/ping')}"
+  - log: "${http.asString('http://52.188.156.53:8001/api/v1/server/ping')}"
 
   - task: http
     in:
