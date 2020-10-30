@@ -10,4 +10,4 @@ flows:
         Authorization: bearer 61edd7af-67cd-4047-b93c-95897fdd54fe
       response: json
   - log: "New Response received: ${response}"
-  - log: "${response.content.summary}
+  - log: "${response.content.summary}"
