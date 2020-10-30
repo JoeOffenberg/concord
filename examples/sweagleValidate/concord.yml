@@ -6,6 +6,6 @@ flows:
     in:
       method: GET
       url: https://testing.sweagle.com/api/v1/data/include/validate?name=TradeMax-PRD&forIncoming=true&withCustomValidations=true
-      auth: bearer 61edd7af-67cd-4047-b93c-95897fdd54fe
+      auth: bearer 61edd7af-67cd-4047-b93c-95897fdd54ff
       response: json
   - log: "Response received: ${response}"
