@@ -1,13 +1,11 @@
 flows:
   default:
   - log: "${http.asString('http://52.188.156.53:8001/api/v1/server/ping')}"
-
   - task: http
     in:
       method: GET
       url: https://testing.sweagle.com/api/v1/data/include/validate?name=TradeMax-PRD&forIncoming=true&withCustomValidations=true
       headers:
-        Authorization: bearer 61edd7af-67cd-4047-b93c-95897fdd54fe
+        Authorization: bearer ${crypto.exportAsString('Default', 'sweagleApiKey')}
       response: json
-  - log: "New Response received: ${response}"
-  - log: "${response.content.summary}"
+  - log: "Validation Summary: ${response.content.summary}"
