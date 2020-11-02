@@ -12,6 +12,6 @@ flows:
   - if: ${response.content.summary.errors > 0}
     then:
       - log: "Configuration Validation Errors"
-      - log:  ${response.errors.failedParsers.errorDescription}
+      - log:  ${response.errors.failedParsers}
       - exit
 
