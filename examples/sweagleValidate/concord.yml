@@ -12,4 +12,4 @@ flows:
   - if: ${response.content.summary.errors > 0}
     then:
       - exit
-    - log: "Validation Errors"
+    - log: "Configuration Validation Errors"
