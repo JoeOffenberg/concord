@@ -9,3 +9,7 @@ flows:
         Authorization: bearer ${crypto.exportAsString('Default','sweagleApiKey','')}
       response: json
   - log: "Validation Summary: ${response.content.summary}"
+  - if: ${response.content.summary.errors > 0}
+    then:
+      - exit
+    - log: "Validation Errors"
