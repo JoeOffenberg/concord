@@ -11,6 +11,6 @@ flows:
   - log: "Validation Summary: ${response.content.summary}"
   - if: ${response.content.summary.errors > 0}
     then:
-      - throw: "Aborting Process - Configuration Validation Errors:  ${response.content.errors.failedParsers[0].errorDescription}"
+      - throw: "Aborting Process - Configuration Validation  ${response.content.errors.failedParsers[0].errorDescription}"
 
 
