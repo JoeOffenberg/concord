@@ -6,6 +6,6 @@ flows:
       method: GET
       url: https://testing.sweagle.com/api/v1/data/include/validate?name=TradeMax-PRD&forIncoming=true&withCustomValidations=true
       headers:
-        Authorization: bearer ${crypto.exportAsString('sweagleApiKey')}
+        Authorization: bearer ${crypto.exportAsString('Default','sweagleApiKey','')}
       response: json
   - log: "Validation Summary: ${response.content.summary}"
